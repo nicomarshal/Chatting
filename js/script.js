@@ -5,7 +5,7 @@
 import emojis from "./emojis.js";
 import {readImg, gallery, documents, resetFiles} from "./read_files.js";
 import {camara, galleryCam} from "./camara.js";
-import ubication from "./ubication.js";
+import {ubication, position} from "./ubication.js";
 import {sliderPrevisual, resetSliderPrev} from "./slider_previsual.js";
 import {modal, slider} from "./slider.js";
 import {addZeros, messageTime} from "./time.js";
@@ -196,11 +196,10 @@ const createHTML = (key, type, message, documents, gallery, time) => {
 	text.classList.add("text");
 	clock.classList.add("clock");
 
-	text.textContent = message;
 	hours.textContent = time[0] + ":";
 	minutes.textContent = time[1];
 
-	content.appendChild(text);
+	content.innerHTML = message;
 	clock.appendChild(hours);
 	clock.appendChild(minutes);
 
@@ -687,17 +686,28 @@ send.addEventListener("click", () => {
 			name: "Chat B", 
 			message: message, 
 			documents: documents,
-			gallery: galleryCam, 
+			gallery: galleryCam,
 			time: time
 		})
 	}
-	else if (document.querySelectorAll(".channel > .modalPrevisual").length !== 0) {
+
+	else if (document.querySelectorAll(".channel > .modalMap").length !== 0) {
+		addObject({
+			type: "sent",
+			name: "Chat B", 
+			message: position, 
+			documents: documents,
+			gallery: galleryCam,
+			time: time
+		})
+	}
+	else {
 		addObject({
 			type: "sent",
 			name: "Chat B", 
 			message: message, 
 			documents: documents,
-			gallery: gallery, 
+			gallery: gallery,
 			time: time
 		})
 	}

@@ -821,3 +821,12 @@ body {
 	max-width: 1200px;
 }
 
+.position {
+	text-decoration: none;
+	color: white;
+}
+
+.position:hover {
+	color: lightgrey;
+}
+

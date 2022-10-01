@@ -1,6 +1,8 @@
 //----------------------------------------------------------------------------------------
 //UBICACIÓN ACTUAL -----------------------------------------------------------------------
-export default function ubication(ch) {
+export let position;
+
+export function ubication(ch) {
 	const channel = document.querySelector(ch);
 
 	const modalMap = document.createElement("DIV");
@@ -32,8 +34,8 @@ export default function ubication(ch) {
 	  	(pos) => {
 		  	console.log(pos);
 		    
-		    let latitude = pos.coords.latitude;
-		    let longitude = pos.coords.longitude;
+		   	let latitude = pos.coords.latitude;
+		   	let longitude = pos.coords.longitude;
 
 			const map = L.map('map').setView([latitude, longitude], 13);
 
@@ -51,6 +53,8 @@ export default function ubication(ch) {
 
 				L.marker([latLng.lat, latLng.lng]).addTo(map);
 			})
+
+			position = `<a class="position" href="https://www.google.com/maps/@${latitude},${longitude},19z" target="_blank" rel="noopener">Ver la ubicación en Google Maps</a>`;
 
 			exit.addEventListener("click", () => {
 				channel.removeChild(modalMap);
