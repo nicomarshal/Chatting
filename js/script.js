@@ -4,7 +4,7 @@
 //IMPORTACIÓN DE COMPONENTES --------------------------------------------------------------------
 import emojis from "./emojis.js";
 import {readImg, gallery, documents, resetFiles} from "./read_files.js";
-import camara from "./camara.js";
+import {camara, galleryCam} from "./camara.js";
 import ubication from "./ubication.js";
 import {sliderPrevisual, resetSliderPrev} from "./slider_previsual.js";
 import {modal, slider} from "./slider.js";
@@ -612,14 +612,6 @@ const removeAfter = () => {
 	if (document.querySelectorAll(".channel > .modalVideo").length !== 0) {
 		channel.removeChild(document.querySelector(".modalVideo"));
 	}
-
-	if (document.querySelectorAll(".channel > .emojisDiv").length !== 0) {
-		channel.removeChild(document.querySelector(".emojisDiv"));
-	}
-
-	if (document.querySelectorAll(".channel > .boxMenu").length !== 0) {
-		channel.removeChild(document.querySelector(".boxMenu"));
-	}	
 }
 
 const placeHolder = () => {
@@ -678,8 +670,6 @@ attach.addEventListener("click", () => {
 
 let oilS = false;
 send.addEventListener("click", () => {
-	//removeAfter();
-
 	let message = document.querySelector(".message").textContent;
 	let time = messageTime();
 
@@ -691,7 +681,17 @@ send.addEventListener("click", () => {
 		contS++;
 	}
 
-	if (message.length > 0 || gallery.length > 0) {
+	if (document.querySelectorAll(".channel > .modalVideo").length !== 0) {
+		addObject({
+			type: "sent",
+			name: "Chat B", 
+			message: message, 
+			documents: documents,
+			gallery: galleryCam, 
+			time: time
+		})
+	}
+	else if (document.querySelectorAll(".channel > .modalPrevisual").length !== 0) {
 		addObject({
 			type: "sent",
 			name: "Chat B", 
@@ -701,6 +701,8 @@ send.addEventListener("click", () => {
 			time: time
 		})
 	}
+
+	removeAfter();
 })
 
 //------------------------------------------------------------------------------------

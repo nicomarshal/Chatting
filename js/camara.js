@@ -1,6 +1,8 @@
 //----------------------------------------------------------------------------------------
 //CÁMARA DE FOTOS ------------------------------------------------------------------------
-export default function	camara(ch) {
+export let galleryCam = [];
+
+export function	camara(ch) {
 	const channel = document.querySelector(ch);
 
 	const modalVideo = document.createElement("DIV");
@@ -72,13 +74,12 @@ export default function	camara(ch) {
 		
 		if (document.querySelectorAll(".modalVideo > .boxImgCaptured").length === 0) {
 			//modalVideo.style.flexDirection = "column";
-			console.log("Hola baby");
 			boxVideo.appendChild(boxImgCaptured);
 		}
 
-		gallery[cont] = imgCaptured.src;
+		galleryCam[cont] = imgCaptured.src;
 		cont++;
-		console.log(gallery);
+		console.log(galleryCam);
 		console.log(cont);
 	})
 }
