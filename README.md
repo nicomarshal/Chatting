@@ -1,2 +1,2 @@
 # chatting
-[Chatting](https://nicomarshal.github.io/chatting)
+[chatting](https://nicomarshal.github.io/chatting)

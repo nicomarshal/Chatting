@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    	integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    	crossorigin=""/>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="manifest" href="manifest.json">
 </head>
@@ -27,75 +27,6 @@
 			</div>
 		</section>
 		<section class="channel">
-			<!--<div class="received">
-				<div class="edition">
-					<div class="edit">
-						<button class="modify" title="Modificar">
-							<img src="enviargian.png">
-						</button>
-					</div>
-					<div class="edit">
-						<button class="delete" title="Eliminar">
-							<img src="enviargian.png">
-						</button>
-					</div>
-				</div>
-				<div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elim
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						giat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-				</div>
-				<button class="okey">Ok</button>
-				<div class="clock">
-					<div>03:</div>
-					<div>46</div>
-				</div>
-			</div>
-			<div class="sent">
-				<img src="giancito.png">
-				<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-				<div class="clock">
-					<div>19:</div>
-					<div>23</div>
-				</div>
-				<div class="edition">
-					<div class="edit">
-						<button class="modify" title="Modificar">
-							<img src="enviargian.png">
-						</button>
-					</div>
-					<div class="edit">
-						<button class="delete" title="Eliminar">
-							<img src="enviargian.png">
-						</button>
-					</div>
-				</div>
-			</div>-->
-			<!--div class="emojisBox">
-				<div class="emojisTypes">
-					<button class="group group1">
-						<h3>Grupo 1</h3>			
-					</button>
-					<button class="group group2">
-						<h3>Grupo 2</h3>			
-					</button>	
-					<button class="group group3">
-						<h3>Grupo 3</h3>			
-					</button>
-					<button class="group group4">
-						<h3>Grupo 4</h3>			
-					</button>
-					<button class="group group5">
-						<h3>Grupo 5</h3>			
-					</button>			
-				</div>
-				<div class="emojisContainer">
-				</div>	
-			</div>-->
 			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13624.85139070913!2d-64.21088579632564!3d-31.380694094550236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1656802929098!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 			<!--<div class="atributions"> 
 				<h2 class="atributions-title">Atribuciones de íconos utilizados</h2>
@@ -111,6 +42,56 @@
 				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/kendis-lasman" title="kendis lasman"> kendis lasman </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
 				<div> Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons"> Roundicons </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
 			</div>-->
+			<div class="boxMenu">
+				<div class="menu">
+					<div class="item document">
+						<input type="file" style="display: none;" multiple>
+						<img src="./assets/documento.png" alt="document">
+					</div>
+					<div class="item gallery">
+						<input type="file" style="display: none;" multiple>
+						<img src="./assets/galeria.png" alt="gallery">
+					</div>
+					<div class="item camara">
+						<img src="./assets/camara.png" alt="camara">
+					</div>
+					<div class="item ubication">
+						<img src="./assets/ubicacion.png" alt="ubication">	
+					</div>
+					<div class="exit">
+						<img src="./assets/equis.png" alt="exit">
+					</div>
+				</div>
+			</div>
+			<div class="emojisDiv">
+				<div class="emojisBox">
+					<div class="emojisTypes">
+						<div class="div1">
+							<button class="group1" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F600;</button>
+						</div>
+						<div class="div2">
+							<button class="group2" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F43B;</button>
+						</div>
+						<div class="div3">
+							<button class="group3" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F30E;</button>
+						</div>
+						<div class="div4">
+							<button class="group4" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x26BD;</button>
+						</div>
+						<div class="div5">
+							<button class="group5" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F4BF;</button>
+						</div>
+					</div>
+					<div class="emojisContainer">
+						<div class="emojis">
+							
+						</div>
+					</div>
+					<div class="exitit">
+						<img src="assets/equis.png" alt="">
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="messenger">
 			<button class="emoticons">
@@ -129,6 +110,6 @@
 			</button>
 		</section>
 	</div>
-	<script src="codigo.js"></script>
+	<script src="./js/script.js" type="module"></script>
 </body>
 </html>

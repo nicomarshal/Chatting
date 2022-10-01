@@ -281,6 +281,7 @@ body {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
+	z-index: 999;
 	display: flex;
 	align-items: center;
 }
@@ -331,15 +332,9 @@ body {
 
 }
 
-.messengerTwo {
-	min-height: 68px;
-	width: 100%;
-	display: flex;
-	align-items: flex-end;
-	column-gap: 10px;
+.messenger.two {
 	background: #303030;
-	padding: 3px 20px 5px 10px;
-	border-top: none;
+	border-top: 4px solid  #303030;
 }
 
 .emoticons {
@@ -366,27 +361,11 @@ body {
 	background: #5875c7;
 }
 
-.emoticonsTwo {
-	height: 40px;
-	flex-basis: 6%;
-	min-width: 40px;
-	max-width: 45px;
-	border: none;
-	outline: none;
-	border-radius: 100%;
-	background: #303030;
-	margin: auto 0px;
-	display: flex;
-	justify-content: center;
-	align-items: center;		
+.emoticons.two {
+	background: #303030;		
 }
 
-.emoticonsTwo img {
-	height: 25px;
-	width: 25px;	
-}
-
-.emoticonsTwo:hover {
+.emoticons.two:hover {
 	background: #505050;	
 }
 
@@ -397,8 +376,16 @@ body {
 	background: transparent;
 	position: absolute;
 	bottom: 68px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 999;
 	display: flex;
 	justify-content: center;
+}
+
+.emojisDiv.active {
+	opacity: 1;
+	visibility: visible;
 }
 
 .emojisBox {
@@ -620,8 +607,16 @@ body {
 	background: transparent;
 	position: absolute;
 	bottom: 68px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 999;
 	display: flex;
 	justify-content: center;
+}
+
+.boxMenu.active {
+	opacity: 1;
+	visibility: visible;
 }
 
 .menu {
