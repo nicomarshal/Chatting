@@ -1,0 +1,21 @@
+{
+	"name": "ChattingWithTheWorld",
+	"short_name": "Chatting",
+	"description":"Conoce a personas de todo el mundo",
+	"background_color": "#3855a7",
+	"theme_color": "#3855a7",
+	"orientation": "portrait",
+	"lang": "es-AR",
+	"id": "/chatting/index.html",
+	"scope": "/chatting/",
+	"start_url":"index.html",
+	"display": "standalone",
+	"icons": [
+		{
+			"src": "assets/argentina.png",
+			"sizes":"512x512",
+			"type": "image/png",
+			"purpose": "any"
+		}
+	]
+}

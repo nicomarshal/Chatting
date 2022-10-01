@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Last-Modified" content="0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   	integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   	crossorigin=""/>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="manifest" href="manifest.json">
+</head>
+<body>
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   	integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   	crossorigin=""></script>
+	<div class="container">
+		<section class="header">
+			<div class="photo">
+				<img src="assets/perfil.png">
+			</div>
+			<div class="data">
+				<div class="name">Usuario</div>
+				<div class="aboutme">El tiempo es lo único que no se puede recuperar</div>
+			</div>
+		</section>
+		<section class="channel">
+			<!--<div class="received">
+				<div class="edition">
+					<div class="edit">
+						<button class="modify" title="Modificar">
+							<img src="enviargian.png">
+						</button>
+					</div>
+					<div class="edit">
+						<button class="delete" title="Eliminar">
+							<img src="enviargian.png">
+						</button>
+					</div>
+				</div>
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elim
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						giat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+				<button class="okey">Ok</button>
+				<div class="clock">
+					<div>03:</div>
+					<div>46</div>
+				</div>
+			</div>
+			<div class="sent">
+				<img src="giancito.png">
+				<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<div class="clock">
+					<div>19:</div>
+					<div>23</div>
+				</div>
+				<div class="edition">
+					<div class="edit">
+						<button class="modify" title="Modificar">
+							<img src="enviargian.png">
+						</button>
+					</div>
+					<div class="edit">
+						<button class="delete" title="Eliminar">
+							<img src="enviargian.png">
+						</button>
+					</div>
+				</div>
+			</div>-->
+			<!--div class="emojisBox">
+				<div class="emojisTypes">
+					<button class="group group1">
+						<h3>Grupo 1</h3>			
+					</button>
+					<button class="group group2">
+						<h3>Grupo 2</h3>			
+					</button>	
+					<button class="group group3">
+						<h3>Grupo 3</h3>			
+					</button>
+					<button class="group group4">
+						<h3>Grupo 4</h3>			
+					</button>
+					<button class="group group5">
+						<h3>Grupo 5</h3>			
+					</button>			
+				</div>
+				<div class="emojisContainer">
+				</div>	
+			</div>-->
+			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13624.85139070913!2d-64.21088579632564!3d-31.380694094550236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1656802929098!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+			<!--<div class="atributions"> 
+				<h2 class="atributions-title">Atribuciones de íconos utilizados</h2>
+				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/srip" title="srip"> srip </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Iconos diseñados por <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/those-icons" title="Those Icons"> Those Icons </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/andrean-prabowo" title="Andrean Prabowo"> Andrean Prabowo </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/uniconlabs" title="Uniconlabs"> Uniconlabs </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/sumberrejeki" title="SumberRejeki"> SumberRejeki </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/smartline" title="Smartline"> Smartline </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Iconos diseñados por <a href="" title="inkubators"> inkubators </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/kendis-lasman" title="kendis lasman"> kendis lasman </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
+				<div> Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons"> Roundicons </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+			</div>-->
+		</section>
+		<section class="messenger">
+			<button class="emoticons">
+				<img src="assets/emoticon.png">
+			</button>
+			<div class="messageBox">
+				<p class="message"  contenteditable="true">Mensaje...</p>
+				<textarea class="textarea" placeholder="Escriba su mensaje aquí..." style="display:none"></textarea>
+			</div>
+			<input type="file" class="file" style="display:none" multiple>
+			<button class="attach">
+				<img src="assets/adjuntar.png">
+			</button>
+			<button class="send">
+				<img src="assets/enviar.png">
+			</button>
+		</section>
+	</div>
+	<script src="codigo.js"></script>
+</body>
+</html>
