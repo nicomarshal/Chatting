@@ -5,7 +5,7 @@ let version = "Version 2";
 self.addEventListener("install", e => {
 	e.waitUntil(
 		caches.open(version).then(cache => {
-			return cache.addAll(["index.html", "estilo.css","codigo.js"])
+			return cache.addAll(["index.html", "style.css", "./js/script.js"])
 			.then(() => self.skipWaiting());
 			console.log("Archivos almacenados en caché");
 			console.log("SW instalado");

@@ -29,10 +29,11 @@ const Channel2 = new BroadcastChannel("myChannel2");
 //-----------------------------------------------------------------------------------------------
 //REGISTRO DE SERVICE WORKER --------------------------------------------------------------------
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register("./sw.js")
+	navigator.serviceWorker.register("sw.js")
 		.then(reg => console.log("Registro de SW exitoso", reg))
 		.catch(err => console.log("Error al tratar de registrar el SW", err))
 }
+
 
 //-----------------------------------------------------------------------------------------------
 //APERTURA DE LA BASE DE DATOS INDEXEDDB --------------------------------------------------------
