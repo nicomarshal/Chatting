@@ -280,10 +280,10 @@ const createHTML = (key, type, message, documents, images, time) => {
 		})}}*/
 
 	//En caso de existir SliderPrev, eliminarlo
-	if (type === "sent" && document.querySelectorAll(".channel > .modalPrevisual").length !== 0) {
+	if (type === "sent" && document.querySelectorAll(".container > .modalPrevisual").length !== 0) {
 		console.log("Eliminando previsualizadas");
 		const modalPrev = document.querySelector(".modalPrevisual");
-		channel.removeChild(modalPrev);
+		container.removeChild(modalPrev);
 
 		console.log("Restableciendo estilos Messenger");
 		const addMore = document.querySelector(".addMore");

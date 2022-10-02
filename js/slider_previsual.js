@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-const channel = document.querySelector(".channel");
 const messenger = document.querySelector(".messenger");
 const emoticons = document.querySelector(".emoticons");
 const messageBox = document.querySelector(".messageBox");
@@ -79,7 +78,7 @@ export function sliderPrevisual(type, gallery) {
 
 function modalPrevisual() {
 	console.log("Creando ModalPrev");
-	const modalPrev = document.createElement("DIV");
+	const modalPrev = document.createElement("SECTION");
 	const exit = document.createElement("DIV");
 	const imgExit = document.createElement("IMG");
 	modalPrev.classList.add("modalPrevisual");
@@ -88,7 +87,7 @@ function modalPrevisual() {
 
 	exit.appendChild(imgExit);
 	modalPrev.appendChild(exit);
-	channel.appendChild(modalPrev);
+	container.appendChild(modalPrev);
 
 	//-----------------------------------------------------------
 	console.log("Cambiando estilos Messenger")
@@ -108,7 +107,7 @@ function modalPrevisual() {
 	
 	//-----------------------------------------------------------
 	exit.addEventListener("click", () => {
-		channel.removeChild(modalPrev);
+		container.removeChild(modalPrev);
 		messenger.classList.remove("two");
 		emoticons.classList.remove("two");
 		messenger.replaceChild(attach, addMore);

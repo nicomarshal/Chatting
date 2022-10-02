@@ -1,9 +1,9 @@
-const channel = document.querySelector(".channel");
+const container = document.querySelector(".container");
 
 let lalo = true;
 export function modal(image){
 	return new Promise (resolve => {
-		const modalImg = document.createElement("DIV");
+		const modalImg = document.createElement("SECTION");
 		const readImg = document.createElement("DIV");
 		const boxImge = document.createElement("DIV");
 		const img = document.createElement("IMG");
@@ -27,10 +27,10 @@ export function modal(image){
 
 		modalImg.appendChild(readImg);
 		modalImg.appendChild(quit);
-		channel.appendChild(modalImg);
+		container.appendChild(modalImg);
 
 		quit.addEventListener("click", () => {
-			channel.removeChild(modalImg);
+			container.removeChild(modalImg);
 			lalo = true;
 		})
 
