@@ -612,6 +612,16 @@ const removeAfter = () => {
 	if (document.querySelectorAll(".channel > .modalVideo").length !== 0) {
 		channel.removeChild(document.querySelector(".modalVideo"));
 	}
+
+	if (document.querySelectorAll(".channel > .emojisDiv").length !== 0) {
+		const emojisDiv = document.querySelector(".emojisDiv");
+		emojisDiv.classList.remove("active");
+	}
+
+	if (document.querySelectorAll(".channel > .boxMenu").length !== 0) {
+		const boxMenu = document.querySelector(".boxMenu");
+		boxMenu.classList.remove("active");
+	}
 }
 
 const placeHolder = () => {
