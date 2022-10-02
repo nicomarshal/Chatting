@@ -54,7 +54,7 @@ export function ubication(ch) {
 				L.marker([latLng.lat, latLng.lng]).addTo(map);
 			})
 
-			position = `<a class="position" href="https://www.google.com/maps/@${latitude},${longitude},19z" target="_blank" rel="noopener">Ver la ubicación en Google Maps</a>`;
+			position = `<a class="position" href="https://www.google.com/maps/@${latitude},${longitude},20z" target="_blank" rel="noopener">Ver ubicación en Google Maps</a>`;
 
 			exit.addEventListener("click", () => {
 				channel.removeChild(modalMap);
