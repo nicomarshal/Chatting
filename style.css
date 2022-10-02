@@ -13,8 +13,8 @@ body {
 	height: 100vh;
 	width: 100vw;
 	min-height: 400px;
-	min-width: 350px;
-	max-width: 1500px;
+	min-width: 280px;
+	max-width: 1200px;
 	display: flex;
 	flex-direction: column;
 }
@@ -333,7 +333,7 @@ body {
 
 .modalDoc, .modalImg {
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
@@ -354,7 +354,7 @@ body {
 .boxImge {
 	width: 50%;
 	max-height: 800px;
-	min-width: 350px;
+	min-width: 280px;
 	display: flex;
 	justify-content: center;
 }
@@ -433,7 +433,7 @@ body {
 
 .emojisDiv {
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 1200px;
 	background: transparent;
 	position: absolute;
@@ -685,7 +685,7 @@ body {
 
 .boxMenu {
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 1200px;
 	background: transparent;
 	position: absolute;
@@ -758,7 +758,7 @@ body {
 
 .modalPrevisual {
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
@@ -770,7 +770,7 @@ body {
 
 .boxPrevisual {
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 1200px;
 	background: #303030;
 	padding: 12px 0px 0px 0px;
@@ -819,7 +819,7 @@ body {
 
 .modalVideo {
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
@@ -832,7 +832,7 @@ body {
 
 .boxVideo {	
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 760px;
 	position: relative;
 	top: 5vh;
@@ -911,7 +911,7 @@ body {
 
 .modalMap {
 	width: 100%;
-	min-width: 350px;
+	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
