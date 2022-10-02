@@ -779,7 +779,6 @@ body {
 .boxImg {
 	height: 100%;
 	width: 50%;
-	max-height: 300px;
 	max-width: 400px;
 }
 
