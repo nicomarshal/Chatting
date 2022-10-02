@@ -335,7 +335,7 @@ body {
 	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	bottom: 0px;
 	z-index: 999;
@@ -434,7 +434,7 @@ body {
 	width: 100%;
 	min-width: 280px;
 	background: transparent;
-	position: absolute;
+	position: fixed;
 	bottom: 54px;
 	z-index: 999;
 	display: flex;
@@ -684,7 +684,7 @@ body {
 	width: 100%;
 	min-width: 280px;
 	background: transparent;
-	position: absolute;
+	position: fixed;
 	bottom: 54px;
 	z-index: 999;
 	display: flex;
@@ -757,7 +757,7 @@ body {
 	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	bottom: 54px;
 	display: flex;
@@ -818,7 +818,7 @@ body {
 	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	bottom: 54px;
 	display: flex;
@@ -910,7 +910,7 @@ body {
 	min-width: 280px;
 	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	bottom: 54px;
 	display: flex;
