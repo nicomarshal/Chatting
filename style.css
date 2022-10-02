@@ -23,28 +23,28 @@ body {
 	height: auto;
 	width: 100%;
 	background: #3855a7;
-	border-bottom: 4px solid black;
+	border-bottom: 3px solid black;
 	display: flex;
 	align-items: center;
 }
 
 .photo {
-	max-height: 85px;
-	min-height: 85px;
-	min-width: 85px;
-	max-width: 85px;
-	padding: 9px;
-	padding-left: 15px;
-	margin-right: 8px;
+	max-height: 68px;
+	min-height: 68px;
+	min-width: 68px;
+	max-width: 68px;
+	padding: 7px;
+	padding-left: 12px;
+	margin-right: 6.4px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .photo img {
-	height: 61px;
+	height: 49px;
 	width: 100%;
-	border: 2px solid white;
+	border: 1.5px solid white;
 	border-radius: 100%;
 	object-fit: cover;
 }
@@ -59,16 +59,16 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	row-gap: 5px;
-	padding: 10px 0px;
+	row-gap: 4px;
+	padding: 8px 0px;
 }
 
 .name {
-	font-size: 22px;
+	font-size: 18px;
 }
 
 .aboutme {
-	font-size: 18px;
+	font-size: 15px;
 	color: lightgrey;
 }
 
@@ -77,47 +77,47 @@ body {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	row-gap: 15px;
+	row-gap: 9.5px;
 	overflow-y: auto;
 	overflow-x: hidden;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 9.5px;
+	padding-bottom: 9.5px;
 	background: #202020;
 }
 
 .channel::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 }
 
 .channel::-webkit-scrollbar-track {
 	background: #202020;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .channel::-webkit-scrollbar-thumb {
 	background: #606060;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .channel::-webkit-scrollbar-thumb:hover {
 	background: #808080;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .atributions {
 	height: auto;
 	width: auto;
-	font-size: 18px;
+	font-size: 14px;
 	background: white;
-	border-radius: 15px;
-	padding: 15px;
+	border-radius: 12px;
+	padding: 12px;
 	margin-left: 2%;
 	position: absolute;
 	align-self: flex-start;
 }
 
 .atributions-title {
-	margin-bottom: 13px;
+	margin-bottom: 10px;
 }
 
 .received {
@@ -137,15 +137,15 @@ body {
 
 .sent {
 	width: 60%;
-	min-width: 280px;
-	max-width: 370px;
+	min-width: 224px;
+	max-width: 296px;
 	align-self: flex-end;
 	background: #30498f;
 	color: white;
-	border-radius: 18px;
-	padding: 15px;
+	border-radius: 14.5px;
+	padding: 12px;
 	margin-right: 3vw;
-	font-size: 22px;
+	font-size: 17.5px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -168,15 +168,15 @@ body {
 .blockImg {
 	display: flex;
 	flex-direction: column;
-	row-gap: 3px;
+	row-gap: 2.5px;
 }
 
 .gridImg {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(115px, 170px));
+	grid-template-columns: repeat(2, minmax(92px, 136px));
 	grid-template-rows: repeat(2, 18vh);
-	grid-column-gap: 3px;
-	grid-row-gap: 3px;
+	grid-column-gap: 2.5px;
+	grid-row-gap: 2.5px;
 }
 
 .buttImg {
@@ -205,8 +205,8 @@ body {
 
 .seeMore {
 	position: absolute;
-	height: 60px;
-	width: 60px;
+	height: 48px;
+	width: 48px;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -217,7 +217,7 @@ body {
 .buttImg img, .lastButtImg .lastImg {
 	width: 100%;
 	height: 100%;
-	border-radius: 8px;
+	border-radius: 6.5px;
 	object-fit: cover;
 	object-position: center;
 }
@@ -229,20 +229,20 @@ body {
 .content {
 	padding-right: 20%;
 	word-break: break-word;
-	margin-top: 7px;
+	margin-top: 5.6px;
 }
 
 .edition {
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 12px;
+	top: 12px;
 	display: flex;
-	row-gap: 5px;
+	row-gap: 4px;
 }
 
 .modify, .delete {
-	height: 30px;
-	width: 30px;
+	height: 24px;
+	width: 24px;
 	border: none;
 	outline: none;
 	border-radius: 100%;
@@ -260,8 +260,8 @@ body {
 
 .back {
 	visibility: visible;
-	height: 30px;
-	width: 30px;
+	height: 24px;
+	width: 24px;
 	border: none;
 	outline: none;
 	border-radius: 100%;
@@ -276,8 +276,8 @@ body {
 }
 
 .modify img, .delete img, .back img {
-	height: 20px;
-	width: 20px;
+	height: 16px;
+	width: 16px;
 }
 
 .delete {
@@ -286,17 +286,17 @@ body {
 
 .delete img {
 	position: absolute;
-	left: 7px;
+	left: 5.5px;
 }
 
 .modifyBox {
 	width: 100%;
 	border: none;
 	outline: none;
-	margin-top: 7px;
+	margin-top: 5.6px;
 	display: flex;
 	align-items: center;
-	column-gap: 10px;
+	column-gap: 8px;
 }
 
 .modifyContent {
@@ -306,13 +306,13 @@ body {
 }
 
 .okey {
-	height: 35px;
-	width: 35px;
+	height: 28px;
+	width: 28px;
 	border: none;
 	outline: none;
 	border-radius: 100%;
 	background: #209cff;
-	padding: 5px;
+	padding: 4px;
 	justify-self: flex-start;
 	transition: background 0.4s ease;
 }
@@ -326,15 +326,15 @@ body {
 	display: flex;
 	position: absolute;
 	bottom: 1px;
-	right: 15px;
-	font-size: 16px;
+	right: 12px;
+	font-size: 13px;
 }
 
 
 .modalDoc, .modalImg {
 	width: 100%;
 	min-width: 350px;
-	max-width: 1500px;
+	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
 	top: 0px;
@@ -366,14 +366,14 @@ body {
 
 .quit {
 	position: absolute;
-	right: 12px;
-	top: 12px;
+	right: 9.5px;
+	top: 9.5px;
 	opacity: 1;
 	transition: opacity 0.4s ease;
 }
 .quit img {
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 }
 
 .quit:hover {
@@ -382,14 +382,14 @@ body {
 }
 
 .messenger {
-	min-height: 68px;
+	min-height: 54px;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
 	background: #3855a7;
-	padding: 3px 20px 5px 10px;
-	border-top: 4px solid  black;
+	padding: 3px 20px 3px 10px;
+	border-top: 3px solid  black;
 
 }
 
@@ -399,10 +399,10 @@ body {
 }
 
 .emoticons {
-	height: 40px;
+	height: 32px;
 	flex-basis: 6%;
-	min-width: 40px;
-	max-width: 45px;
+	min-width: 32px;
+	max-width: 36px;
 	border: none;
 	outline: none;
 	border-radius: 100%;
@@ -414,8 +414,8 @@ body {
 }
 
 .emoticons img {
-	height: 25px;
-	width: 25px;
+	height: 20px;
+	width: 20px;
 }
 
 .emoticons:hover {
@@ -434,10 +434,10 @@ body {
 .emojisDiv {
 	width: 100%;
 	min-width: 350px;
-	max-width: 1500px;
+	max-width: 1200px;
 	background: transparent;
 	position: absolute;
-	bottom: 68px;
+	bottom: 54px;
 	z-index: 999;
 	display: flex;
 	justify-content: center;
@@ -453,27 +453,27 @@ body {
 
 .emojisBox {
 	width: 100%;
-	max-width: 1100px;
+	max-width: 880px;
 	background: #303030;
-	border-radius: 13px;
+	border-radius: 10px;
 	position: relative;
 }
 
 .emojisTypes {
 	width: 100%;
-	border-radius: 13px 13px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
 	background: rgb(64, 64, 64);
 	display: flex;
 }
 
 .div1, .div2, .div3, .div4, .div5 {
 	width: 25%;
-	height: 45px;
+	height: 36px;
 }
 
 .div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover {
 	width: 25%;
-	height: 45px;
+	height: 36px;
 	cursor: pointer;
 }
 
@@ -482,7 +482,7 @@ body {
 	height: 100%;
 	outline: none;
 	border: none;
-	font-size: 25px;
+	font-size: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -493,27 +493,27 @@ body {
 }
 
 .div1, .group1 {
-	border-radius: 13px 0px 0px 0px;
+	border-radius: 10px 0px 0px 0px;
 }
 
 .div5, .group5 {
-	border-radius: 0px 13px 0px 0px;
+	border-radius: 0px 10px 0px 0px;
 }
 
 .emojis {
-	max-height: 300px;
-	padding: 7px 0px 7px 11.5px;
+	max-height: 240px;
+	padding: 5.5px 0px 5.5px 9.2px;
 	overflow-y: auto;
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: 7px;
-	column-gap: 7px;
+	row-gap: 5.5px;
+	column-gap: 5.5px;
 }
 
 .emoji {
-	height: 30px;
-	width: 30px;
-	font-size: 30px;
+	height: 24px;
+	width: 24px;
+	font-size: 24px;
 	background: #303030;
 	outline: none;
 	border: none;
@@ -528,14 +528,14 @@ body {
 
 .exitit {
 	position: absolute;
-	right: 7px;
-	top: 7px;
+	right: 5.5px;
+	top: 5.5px;
 	opacity: 1;
 	transition: opacity 0.4s ease;
 }
 .exitit img {
-	width: 12px;
-	height: 12px;
+	width: 9.5px;
+	height: 9.5px;
 }
 
 .exitit:hover {
@@ -544,31 +544,30 @@ body {
 }
 
 .emojis::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 	background: #707070;
 }
 
 .emojis::-webkit-scrollbar-track {
 	background: #202020;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .emojis::-webkit-scrollbar-thumb {
 	background: #606060;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .emojis::-webkit-scrollbar-thumb:hover {
 	background: #808080;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .messageBox {
 	height: auto;
 	width: 100%;
 	background: #dfdfdf;
-	margin: 5px 0px;
-	border-radius: 10px;
+	border-radius: 8px;
 }
 
 .message {
@@ -577,12 +576,12 @@ body {
 	resize: none;
 	border: none;
 	outline: none;
-	padding: 5px;
+	padding: 4px;
 	margin-right: 10px;
 	background: #dfdfdf;
-	border-radius: 10px;
+	border-radius: 8px;
 	color: #606060;
-	font-size: 21px;
+	font-size: 17px;
 	overflow: hidden;
 	word-break: break-word;
 }
@@ -598,19 +597,19 @@ body {
 
 .message::-webkit-scrollbar-thumb {
 	background: #606060;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .message::-webkit-scrollbar-thumb:hover {
 	background: #808080;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .attach {
-	height: 40px;
+	height: 32px;
 	flex-basis: 6%;
-	min-width: 40px;
-	max-width: 45px;
+	min-width: 32px;
+	max-width: 36px;
 	border: none;
 	outline: none;
 	border-radius: 100%;
@@ -622,8 +621,8 @@ body {
 }
 
 .attach img {
-	height: 27px;
-	width: 27px;
+	height: 22px;
+	width: 22px;
 }
 
 .attach:hover {
@@ -632,10 +631,10 @@ body {
 }
 
 .addMore {
-	height: 40px;
+	height: 32px;
 	flex-basis: 6%;
-	min-width: 40px;
-	max-width: 45px;
+	min-width: 32px;
+	max-width: 36px;
 	border: none;
 	outline: none;
 	border-radius: 100%;
@@ -647,8 +646,8 @@ body {
 }
 
 .addMore img {
-	height: 35px;
-	width: 35px;
+	height: 28px;
+	width: 28px;
 }
 
 .addMore:hover {
@@ -656,15 +655,14 @@ body {
 }
 
 .send {
-	height: 50px;
+	height: 40px;
 	flex-basis: 8%;
-	min-width: 50px;
-	max-width: 55px;
+	min-width: 40px;
+	max-width: 44px;
 	border: none;
 	outline: none;
 	border-radius: 100%;
 	background: #209cff;
-	margin: 2px 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -672,8 +670,8 @@ body {
 }
 
 .send img {
-	height: 40px;
-	width: 40px;
+	height: 32px;
+	width: 32px;
 	object-fit: cover;
 	object-position: left;
 	position: relative;
@@ -688,10 +686,10 @@ body {
 .boxMenu {
 	width: 100%;
 	min-width: 350px;
-	max-width: 1500px;
+	max-width: 1200px;
 	background: transparent;
 	position: absolute;
-	bottom: 68px;
+	bottom: 54px;
 	z-index: 999;
 	display: flex;
 	justify-content: center;
@@ -707,24 +705,24 @@ body {
 
 .menu {
 	width: 70%;
-	max-width: 300px;
+	max-width: 240px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	grid-row-gap: 20px;
-	grid-column-gap: 20px;
+	grid-row-gap: 16px;
+	grid-column-gap: 16px;
 	align-items: center;
-	padding: 20px;
-	border-radius: 18px;
+	padding: 16px;
+	border-radius: 14.5px;
 	background: #303030;
 	position: relative;
 }
 
 .item {
-	min-width: 90px;
-	max-width: 120px;
+	min-width: 72px;
+	max-width: 96px;
 	border-radius: 100%;
-	padding: 15px;
+	padding: 12px;
 	background: #209cff;
 	transition: background 0.4s ease;
 }
@@ -743,14 +741,14 @@ body {
 
 .exit {
 	position: absolute;
-	right: 12px;
-	top: 12px;
+	right: 9.5px;
+	top: 9.5px;
 	opacity: 1;
 	transition: opacity 0.4s ease;
 }
 .exit img {
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 }
 
 .exit:hover {
@@ -761,33 +759,32 @@ body {
 .modalPrevisual {
 	width: 100%;
 	min-width: 350px;
-	max-width: 1500px;
+	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
 	top: 0px;
-	bottom: 68px;
+	bottom: 54px;
 	display: flex;
 	align-items: flex-end;
 }
 
 .boxPrevisual {
-	height: 25%;
 	width: 100%;
 	min-width: 350px;
-	max-width: 1500px;
+	max-width: 1200px;
 	background: #303030;
-	padding: 15px 0px 0px 0px;
+	padding: 12px 0px 0px 0px;
 	position: relative;
 	display: flex;
 	justify-content: center;
-	column-gap: 15px;
+	column-gap: 12px;
 }
 
 .boxImg {
 	height: 100%;
 	width: 50%;
-	max-height: 375px;
-	max-width: 500px;
+	max-height: 300px;
+	max-width: 400px;
 }
 
 .boxImg img {
@@ -798,8 +795,8 @@ body {
 }
 
 .buttons {
-	width: 30px;
-	height: 30px;
+	width: 24px;
+	height: 24px;
 	position: absolute;
 	opacity: 1;
 	transition: opacity 0.4s ease;
@@ -823,11 +820,11 @@ body {
 .modalVideo {
 	width: 100%;
 	min-width: 350px;
-	max-width: 1500px;
+	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
 	top: 0px;
-	bottom: 68px;
+	bottom: 54px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -836,7 +833,7 @@ body {
 .boxVideo {	
 	width: 100%;
 	min-width: 350px;
-	max-width: 950px;
+	max-width: 760px;
 	position: relative;
 	top: 5vh;
 	display: flex;
@@ -848,12 +845,12 @@ body {
 }
 
 .controls {
-	width: 90px;
-	height: 90px;
+	width: 72px;
+	height: 72px;
 	position: absolute;
 	left: 50%;
 	bottom: 8%;
-	margin-left: -45px;
+	margin-left: -36px;
 	display: flex;
 }
 
@@ -861,7 +858,7 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 100%;
-	border: 2px solid white;
+	border: 1.5px solid white;
 	background: transparent;
 	display: flex;
 	justify-content: center;
@@ -870,8 +867,8 @@ body {
 }
 
 .screenshot img {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 }
 
 .screenshot:hover{
@@ -880,31 +877,31 @@ body {
 
 .boxImgCaptured {
 	width: 100%;
-	padding-left: 20px;
-	padding-top: 20px;
+	padding-left: 16px;
+	padding-top: 16px;
 	position: absolute;
 	display: flex;
 }
 
 .imgCaptured {
 	width: 20%;
-	min-width: 90px;
-	max-width: 130px;
+	min-width: 72px;
+	max-width: 104px;
 	border: 2px solid white;
 }
 
 .quitit {
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	right: 8px;
+	top: 8px;
 	opacity: 1;
 	transition: opacity 0.4s ease;
 	z-index: 20;
 }
 
 .quitit img {
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 }
 
 .quitit:hover {
@@ -915,11 +912,11 @@ body {
 .modalMap {
 	width: 100%;
 	min-width: 350px;
-	max-width: 1500px;
+	max-width: 1200px;
 	background: rgba(96, 96, 96, 0.6);
 	position: absolute;
 	top: 0px;
-	bottom: 68px;
+	bottom: 54px;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -928,7 +925,7 @@ body {
 .boxMap {
 	height: 70%;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 960px;
 }
 
 .position {
@@ -941,3 +938,8 @@ body {
 	color: lightgrey;
 }
 
+@media screen and (min-width: 768px) {
+	.container {
+		width: 80vw;
+	}
+}
