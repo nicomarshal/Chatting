@@ -1,5 +1,7 @@
 body {	
 	background: #101010;
+	overflow-x: hidden;
+	overflow-y: hidden;
 	display: flex;
 	justify-content: center;
 }
@@ -15,6 +17,8 @@ body {
 	min-height: 400px;
 	min-width: 280px;
 	max-width: 1200px;
+	overflow-x: hidden;
+	overflow-y: hidden;
 	display: flex;
 	flex-direction: column;
 }
