@@ -20,10 +20,11 @@
 		<section class="header">
 			<div class="photo">
 				<img src="assets/perfil.png">
+				<input type="file" style="display: none;">
 			</div>
 			<div class="data">
-				<div class="name">Usuario</div>
-				<div class="aboutme">El tiempo es lo único que no se puede recuperar</div>
+				<div class="name" contenteditable="true">Usuario</div>
+				<div class="aboutme" contenteditable="true">El tiempo es lo único que no se puede recuperar</div>
 			</div>
 		</section>
 		<section class="channel">
@@ -42,56 +43,6 @@
 				<div> Iconos diseñados por <a href="https://www.flaticon.es/autores/kendis-lasman" title="kendis lasman"> kendis lasman </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>
 				<div> Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons"> Roundicons </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
 			</div>-->
-			<div class="boxMenu">
-				<div class="menu">
-					<div class="item document">
-						<input type="file" style="display: none;" multiple>
-						<img src="./assets/documento.png" alt="document">
-					</div>
-					<div class="item gallery">
-						<input type="file" style="display: none;" multiple>
-						<img src="./assets/galeria.png" alt="gallery">
-					</div>
-					<div class="item camara">
-						<img src="./assets/camara.png" alt="camara">
-					</div>
-					<div class="item ubication">
-						<img src="./assets/ubicacion.png" alt="ubication">	
-					</div>
-					<div class="exit">
-						<img src="./assets/equis.png" alt="exit">
-					</div>
-				</div>
-			</div>
-			<div class="emojisDiv">
-				<div class="emojisBox">
-					<div class="emojisTypes">
-						<div class="type div1">
-							<button class="group1" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F600;</button>
-						</div>
-						<div class="type div2">
-							<button class="group2" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F43B;</button>
-						</div>
-						<div class="type div3">
-							<button class="group3" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F30E;</button>
-						</div>
-						<div class="type div4">
-							<button class="group4" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x26BD;</button>
-						</div>
-						<div class="type div5">
-							<button class="group5" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F4BF;</button>
-						</div>
-					</div>
-					<div class="emojisContainer">
-						<div class="emojis">
-							
-						</div>
-					</div>
-					<div class="exitit">
-						<img src="assets/equis.png" alt="">
-					</div>
-				</div>
-			</div>
 		</section>
 		<section class="messenger">
 			<button class="emoticons">
@@ -108,6 +59,56 @@
 			<button class="send">
 				<img src="assets/enviar.png">
 			</button>
+		</section>
+		<section class="emojisDiv">
+			<div class="emojisBox">
+				<div class="emojisTypes">
+					<div class="type div1">
+						<button class="group1" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F600;</button>
+					</div>
+					<div class="type div2">
+						<button class="group2" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F43B;</button>
+					</div>
+					<div class="type div3">
+						<button class="group3" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F30E;</button>
+					</div>
+					<div class="type div4">
+						<button class="group4" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x26BD;</button>
+					</div>
+					<div class="type div5">
+						<button class="group5" style="background: rgb(48, 48, 48); border-bottom: 3px solid rgb(32, 156, 255);">&#x1F4BF;</button>
+					</div>
+				</div>
+				<div class="emojisContainer">
+					<div class="emojis">
+						
+					</div>
+				</div>
+				<div class="exitit">
+					<img src="assets/equis.png" alt="">
+				</div>
+			</div>
+		</section>
+		<section class="boxMenu">
+			<div class="menu">
+				<div class="item document">
+					<input type="file" style="display: none;" multiple>
+					<img src="./assets/documento.png" alt="document">
+				</div>
+				<div class="item gallery">
+					<input type="file" style="display: none;" multiple>
+					<img src="./assets/galeria.png" alt="gallery">
+				</div>
+				<div class="item camara">
+					<img src="./assets/camara.png" alt="camara">
+				</div>
+				<div class="item ubication">
+					<img src="./assets/ubicacion.png" alt="ubication">	
+				</div>
+				<div class="exit">
+					<img src="./assets/equis.png" alt="exit">
+				</div>
+			</div>
 		</section>
 	</div>
 	<script src="./js/script.js" type="module"></script>

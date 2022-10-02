@@ -2,10 +2,10 @@
 //UBICACIÓN ACTUAL -----------------------------------------------------------------------
 export let position;
 
-export function ubication(ch) {
-	const channel = document.querySelector(ch);
+export function ubication(ctner) {
+	const container = document.querySelector(ctner);
 
-	const modalMap = document.createElement("DIV");
+	const modalMap = document.createElement("SECTION");
 	const boxMap = document.createElement("DIV");
 	const viewMap = document.createElement("DIV");
 	viewMap.style.height = "100%";
@@ -28,7 +28,7 @@ export function ubication(ch) {
 	modalMap.appendChild(boxMap);
 	modalMap.appendChild(exit);
 	
-	channel.appendChild(modalMap);
+	container.appendChild(modalMap);
 
 	navigator.geolocation.getCurrentPosition(
 	  	(pos) => {
@@ -57,7 +57,7 @@ export function ubication(ch) {
 			position = `<a class="position" href="https://www.google.com/maps/@${latitude},${longitude},20z" target="_blank" rel="noopener">Ver ubicación en Google Maps</a>`;
 
 			exit.addEventListener("click", () => {
-				channel.removeChild(modalMap);
+				container.removeChild(modalMap);
 			})
 	  	},
 	  	(error) => {

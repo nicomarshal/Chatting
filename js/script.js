@@ -14,6 +14,7 @@ import {addZeros, messageTime} from "./time.js";
 //DECLARACIÓN DE VARIABLES Y CONSTANTES ---------------------------------------------------------
 const container = document.querySelector(".container");
 const header = document.querySelector(".header");
+const photo = document.querySelector(".photo");
 const channel = document.querySelector(".channel");
 const messenger = document.querySelector(".messenger");
 const emoticons = document.querySelector(".emoticons");
@@ -306,7 +307,7 @@ const createHTML = (key, type, message, documents, images, time) => {
 	}
 
 	//Galería de imágenes
-	const gridImg = document.createElement("DIV");
+	const containerImg = document.createElement("DIV");
 	for (let i = 0; i < 4; i++) {
 		const buttImg = document.createElement("BUTTON");
 		buttImg.classList.add("buttImg");
@@ -338,8 +339,12 @@ const createHTML = (key, type, message, documents, images, time) => {
 			fragment.appendChild(buttImg);
 		}
 
+		if (i < 3 && images.length < 4) {
+			containerImg.classList.add("blockImg");			
+		}
+
 		if (i === 3 && images.length >= 4) {
-			gridImg.classList.add("gridImg");
+			containerImg.classList.add("gridImg");
 		}	
 
 		buttImg.addEventListener("click", e => {
@@ -350,8 +355,8 @@ const createHTML = (key, type, message, documents, images, time) => {
 		})	
 	}
 
-	gridImg.appendChild(fragment);
-	contain.insertBefore(gridImg, content);
+	containerImg.appendChild(fragment);
+	contain.insertBefore(containerImg, content);
 
 	return contain;
 }
@@ -563,14 +568,14 @@ const menu = () => {
 		if(e.target.matches(".camara") || e.target.matches(".camara *")) {
 			console.log("Cargando cámara");
 			boxMenu.classList.remove("active");
-			camara(".channel");			
+			camara(".container");			
 		}
 		//Ubicación
 		if(e.target.matches(".ubication") || e.target.matches(".ubication *")) {
 			console.log("Cargando mapa");
 			boxMenu.classList.remove("active");
 
-			ubication(".channel");			
+			ubication(".container");			
 		}
 		//Cerrar menú
 		if(e.target.matches(".exit") || e.target.matches(".exit *")) {
@@ -605,20 +610,20 @@ const menu = () => {
 
 
 const removeAfter = () => {
-	if (document.querySelectorAll(".channel > .modalMap").length !== 0) {
+	if (document.querySelectorAll(".container > .modalMap").length !== 0) {
 		channel.removeChild(document.querySelector(".modalMap"));
 	}
 
-	if (document.querySelectorAll(".channel > .modalVideo").length !== 0) {
-		channel.removeChild(document.querySelector(".modalVideo"));
+	if (document.querySelectorAll(".container > .modalVideo").length !== 0) {
+		container.removeChild(document.querySelector(".modalVideo"));
 	}
 
-	if (document.querySelectorAll(".channel > .emojisDiv").length !== 0) {
+	if (document.querySelectorAll(".container > .emojisDiv").length !== 0) {
 		const emojisDiv = document.querySelector(".emojisDiv");
 		emojisDiv.classList.remove("active");
 	}
 
-	if (document.querySelectorAll(".channel > .boxMenu").length !== 0) {
+	if (document.querySelectorAll(".container > .boxMenu").length !== 0) {
 		const boxMenu = document.querySelector(".boxMenu");
 		boxMenu.classList.remove("active");
 	}
@@ -659,10 +664,30 @@ const placeHolder = () => {
 placeHolder();
 //--------------------------------------------------------------------------------------
 //EVENTOS-------------------------------------------------------------------------------
-emoticons.addEventListener("click", () => {
-	emojis(".channel");
+const img = document.querySelector(".photo img");
+const input = document.querySelector(".photo input");
 
-	const boxMenu = document.querySelectorAll(".channel > .boxMenu");
+photo.addEventListener("click", () => {
+	input.click();
+})
+
+input.addEventListener("change", (e) => {
+	readImg(e.target.files, (result) => {
+		console.log(`Galería png: `, e.target.files);
+		console.log(`Galería base64: `, result);
+		console.log("Imagen cargada correctamente");
+		
+		img.src = `${result[0]}`;
+		console.log("La imagen de perfil fue cambiada con éxito");
+
+		resetFiles([]);
+	})
+})
+
+emoticons.addEventListener("click", () => {
+	emojis();
+
+	const boxMenu = document.querySelectorAll(".container > .boxMenu");
 	if (boxMenu.length !== 0) {
 		boxMenu[0].classList.remove("active");
 	}	
@@ -672,7 +697,7 @@ emoticons.addEventListener("click", () => {
 attach.addEventListener("click", () => {
 	menu();
 
-	const emojisDiv = document.querySelectorAll(".channel > .emojisDiv");
+	const emojisDiv = document.querySelectorAll(".container > .emojisDiv");
 	if (emojisDiv.length !== 0) {
 		emojisDiv[0].classList.remove("active");
 	}
@@ -691,7 +716,7 @@ send.addEventListener("click", () => {
 		contS++;
 	}
 
-	if (document.querySelectorAll(".channel > .modalVideo").length !== 0) {
+	if (document.querySelectorAll(".container > .modalVideo").length !== 0) {
 		addObject({
 			type: "sent",
 			name: "Chat B", 
@@ -702,7 +727,7 @@ send.addEventListener("click", () => {
 		})
 	}
 
-	else if (document.querySelectorAll(".channel > .modalMap").length !== 0) {
+	else if (document.querySelectorAll(".container > .modalMap").length !== 0) {
 		addObject({
 			type: "sent",
 			name: "Chat B", 

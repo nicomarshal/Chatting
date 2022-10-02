@@ -1,6 +1,8 @@
 //-----------------------------------------------------------------------------------
 //EMOJIS-----------------------------------------------------------------------------
-export default function emojis(ch) {	
+export default function emojis() {
+	const messenger = document.querySelector(".messenger");
+
 	let smiles = [];
 	let animals = [];
 	let travel = [];

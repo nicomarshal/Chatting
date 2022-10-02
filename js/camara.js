@@ -2,10 +2,10 @@
 //CÁMARA DE FOTOS ------------------------------------------------------------------------
 export let galleryCam = [];
 
-export function	camara(ch) {
-	const channel = document.querySelector(ch);
+export function	camara(ctner) {
+	const container = document.querySelector(ctner);
 
-	const modalVideo = document.createElement("DIV");
+	const modalVideo = document.createElement("SECTION");
 	const boxVideo = document.createElement("DIV");
 	let video = document.createElement("VIDEO");
 
@@ -53,11 +53,11 @@ export function	camara(ch) {
 			boxVideo.appendChild(exit);
 
 			modalVideo.appendChild(boxVideo);
-			channel.appendChild(modalVideo);
+			container.appendChild(modalVideo);
 		})
 
 		exit.addEventListener("click", () => {
-			channel.removeChild(modalVideo);
+			container.removeChild(modalVideo);
 		})
 
 	}).catch((err) => console.log(err))
