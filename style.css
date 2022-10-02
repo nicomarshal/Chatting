@@ -508,6 +508,7 @@ body {
 	max-height: 240px;
 	padding: 5.5px 0px 5.5px 9.2px;
 	overflow-y: auto;
+	overflow-x: hidden;
 	display: flex;
 	flex-wrap: wrap;
 	row-gap: 5.5px;
@@ -554,7 +555,6 @@ body {
 
 .emojis::-webkit-scrollbar-track {
 	background: #202020;
-	border-radius: 4px;
 }
 
 .emojis::-webkit-scrollbar-thumb {
