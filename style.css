@@ -170,6 +170,10 @@ body {
 	row-gap: 2.5px;
 }
 
+.blockImg .buttImg {
+	height: 36vh;
+}
+
 .gridImg {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(92px, 136px));
