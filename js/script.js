@@ -180,12 +180,11 @@ function deleteObject(key) {
 let contS = 0;
 let contR = 0;
 
-const createHTML = (key, type, message, documents, gallery, time) => {
+const createHTML = (key, type, message, documents, images, time) => {
 	console.log("Creando elemento HTML");
 	const contain = document.createElement("DIV");
 
 	const content = document.createElement("DIV");
-	const text = document.createElement("P");
 
 	const clock = document.createElement("DIV");
 	const hours = document.createElement("DIV");
@@ -193,7 +192,6 @@ const createHTML = (key, type, message, documents, gallery, time) => {
 	
 	contain.classList.add(type);
 	content.classList.add("content");
-	text.classList.add("text");
 	clock.classList.add("clock");
 
 	hours.textContent = time[0] + ":";
@@ -212,7 +210,7 @@ const createHTML = (key, type, message, documents, gallery, time) => {
 		oilS = true;
 		//Creamos los botones modificar y eliminar
 		let refMsg = message;
-		modifyHTML(key, refMsg, contain, content, text, clock);		
+		modifyHTML(key, refMsg, contain, images, content, clock);		
 	}
 	if (type === "received") {
 		content.classList.add(`content-R${contR}`);
@@ -315,15 +313,15 @@ const createHTML = (key, type, message, documents, gallery, time) => {
 		if (i < 3) {
 			const image = document.createElement("IMG");	
 			
-			image.setAttribute("src", gallery[i]);	
+			image.setAttribute("src", images[i]);	
 			buttImg.appendChild(image);
 		}
 		else {
 			const lastImg = document.createElement("IMG");
 			
-			lastImg.setAttribute("src", gallery[i]);	
+			lastImg.setAttribute("src", images[i]);	
 			buttImg.appendChild(lastImg);		
-			if (gallery.length >= 5) {
+			if (images.length >= 5) {
 				const seeMore = document.createElement("IMG");
 				
 				seeMore.setAttribute("src", "assets/añadir.png");
@@ -336,18 +334,18 @@ const createHTML = (key, type, message, documents, gallery, time) => {
 			}
 		}	
 
-		if (gallery[i] !== undefined) {
+		if (images[i] !== undefined) {
 			fragment.appendChild(buttImg);
 		}
 
-		if (i === 3 && gallery.length >= 4) {
+		if (i === 3 && images.length >= 4) {
 			gridImg.classList.add("gridImg");
 		}	
 
 		buttImg.addEventListener("click", e => {
 			console.log("Hola");
-			modal(gallery[i]).then(() => {
-				slider(gallery, e.path[0].currentSrc);
+			modal(images[i]).then(() => {
+				slider(images, e.path[0].currentSrc);
 			})
 		})	
 	}
@@ -358,7 +356,7 @@ const createHTML = (key, type, message, documents, gallery, time) => {
 	return contain;
 }
 
-const modifyHTML = (key, refMsg, contain, content, text, clock) => {
+const modifyHTML = (key, refMsg, contain, images, content, clock) => {
 	console.log("Modificando HTML");
 	const edition = document.createElement("DIV");
 	const edit1 = document.createElement("DIV");
@@ -385,32 +383,35 @@ const modifyHTML = (key, refMsg, contain, content, text, clock) => {
 
 	contain.appendChild(edition);
 
-	if (gallery.length === 0) {
+	if (images.length === 0) {
 		edition.style.right = "10px";
 		edition.style.top = "5px";
+	}
+
+	if (content.textContent === "") {
+		clock.style.bottom = "1px";		
 	}
 	//----------------------------------------------------------------
 	//----------------------------------------------------------------
 	const modifyBox = document.createElement("DIV");
 	const modifyContent = document.createElement("DIV");
-	const modifyText = document.createElement("P");
+	//const modifyText = document.createElement("P");
 	const okey = document.createElement("BUTTON");
 	const imgOkey = document.createElement("IMG");
 
 	let count = contS;
 
 	modifyBox.classList.add("modifyBox");
-	modifyContent.classList.add(`modifyContent-S${count}`);
+	modifyContent.classList.add(`modifyContent-S${count}`, `modifyContent`);
 	okey.classList.add("okey");
 
-	modifyContent.style.width = "auto";
-	modifyText.setAttribute("contenteditable", "true");
-	modifyText.setAttribute("spellcheck", "false");
+	modifyContent.setAttribute("contenteditable", "true");
+	modifyContent.setAttribute("spellcheck", "false");
 
-	modifyText.textContent = refMsg;
+	modifyContent.innerHTML = refMsg;
 	imgOkey.src = "assets/okey.png";
 
-	modifyContent.appendChild(modifyText);
+	//modifyContent.appendChild(modifyText);
 	okey.appendChild(imgOkey);
 	modifyBox.appendChild(modifyContent);
 	modifyBox.appendChild(okey);
@@ -419,21 +420,21 @@ const modifyHTML = (key, refMsg, contain, content, text, clock) => {
 	//----------------------------------------------------------------
 	modify.addEventListener("click", e => {
 		if (modify.classList.contains("modify")) {
-			if (modifyText.textContent !== refMsg) {
-				modifyText.textContent = refMsg;				
+			if (modifyContent.innerHTML !== refMsg) {
+				modifyContent.innerHTML = refMsg;				
 			}
 			contain.replaceChild(modifyBox, content);
-			modifyText.focus();
+			modifyContent.focus();
 
 			clock.style.display = "none";
 			edit2.style.display = "none";
 			modify.classList.replace("modify", "back");
 		} 
 		else {
-			text.textContent = refMsg;
+			content.innerHTML = refMsg;
 			
 			contain.replaceChild(content, modifyBox);
-			text.setAttribute("contenteditable", "false");
+			content.setAttribute("contenteditable", "false");
 
 			clock.style.display = "flex";
 			edit2.style.display = "inline-block";
@@ -442,9 +443,9 @@ const modifyHTML = (key, refMsg, contain, content, text, clock) => {
 	})
 
 	okey.addEventListener("click",  e => {
-		refMsg = modifyText.textContent;
+		refMsg = modifyContent.innerHTML;
 		
-		text.textContent = modifyText.textContent;
+		content.innerHTML = modifyContent.innerHTML;
 		contain.replaceChild(content, modifyBox);
 
 		clock.style.display = "flex";
@@ -455,7 +456,7 @@ const modifyHTML = (key, refMsg, contain, content, text, clock) => {
 		const element = e.path[1].firstElementChild;
 		const className = element.classList.item(0);
 
-		modifyObject(key, text.textContent, className);
+		modifyObject(key, content.innerHTML, className);
 	})		
 
 	delet.addEventListener("click", () => {
@@ -483,7 +484,7 @@ const loadHTML = (num) => {
 		for (let i = 0; i < num; i++) {
 			if (boolean === true) {
 				const newHTML = createHTML(infoDB[counter][0], infoDB[counter][1].type, infoDB[counter][1].message, infoDB[counter][1].documents, infoDB[counter][1].gallery, infoDB[counter][1].time);
-				newHTML.classList.add(`ref-${counter}`);
+				newHTML.classList.add(`ref-${counter}`, `load`);
 
 				fragment.appendChild(newHTML);
 
@@ -496,7 +497,7 @@ const loadHTML = (num) => {
 			}
 			else if (counter < infoDB.length) {
 				const newHTML = createHTML(infoDB[counter][0], infoDB[counter][1].type, infoDB[counter][1].message, infoDB[counter][1].documents, infoDB[counter][1].gallery, infoDB[counter][1].time);
-				newHTML.classList.add(`ref-${counter}`);
+				newHTML.classList.add(`ref-${counter}`, `load`);
 				fragment.insertBefore(newHTML, refHTML);
 				//ALTERNATIVA Linea 219:
 				//refHTML.before(newHTML);
@@ -697,11 +698,11 @@ send.addEventListener("click", () => {
 			name: "Chat B", 
 			message: position, 
 			documents: documents,
-			gallery: galleryCam,
+			gallery: gallery,
 			time: time
 		})
 	}
-	else {
+	else if (message.length > 0 || gallery.length > 0) {
 		addObject({
 			type: "sent",
 			name: "Chat B", 

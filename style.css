@@ -145,6 +145,19 @@ body {
 	flex-direction: column;
 }
 
+.sent.load {
+	opacity: 0;
+	animation: aparecer 0.5s forwards 0.5s;
+}
+
+@keyframes aparecer {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 .gridImg {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -158,6 +171,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-content: center;
+	line-height: 0;
 }
 
 .lastButtImg {
@@ -169,6 +183,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-content: center;
+	line-height: 0;
 }
 
 .seeMore {
@@ -180,6 +195,15 @@ body {
 	bottom: 0;
 	left: 0;
 	margin: auto;
+}
+
+.buttImg img, .lastButtImg img {
+	object-fit: cover;
+	object-position: center;
+}
+
+.buttImg:hover, .lastButtImg:hover {
+	cursor: pointer;
 }
 
 .content {
@@ -206,10 +230,12 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: background 0.4s ease;
 }
 
 .edit:hover .modify, .edit:hover .delete {
 	background: #606060;
+	cursor: pointer;
 }
 
 .back {
@@ -223,6 +249,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.back:hover {
+	cursor: pointer;
 }
 
 .modify img, .delete img, .back img {
@@ -249,6 +279,11 @@ body {
 	column-gap: 10px;
 }
 
+.modifyContent {
+	width: 80%;
+	word-break: break-word;
+}
+
 .okey {
 	height: 35px;
 	width: 35px;
@@ -258,16 +293,18 @@ body {
 	background: #209cff;
 	padding: 5px;
 	justify-self: flex-start;
+	transition: background 0.4s ease;
 }
 
 .okey:hover {
 	background: #46b8f9;
+	cursor: pointer;
 }
 
 .clock {
 	display: flex;
 	position: absolute;
-	bottom: 5px;
+	bottom: 1px;
 	right: 15px;
 	font-size: 16px;
 }
@@ -306,25 +343,27 @@ body {
 	object-fit: cover;
 }
 
-.text {
-	word-break: break-word;
-}
-
 .quit {
 	position: absolute;
 	right: 12px;
 	top: 12px;
+	opacity: 1;
+	transition: opacity 0.4s ease;
 }
 .quit img {
 	width: 15px;
 	height: 15px;
 }
 
+.quit:hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
 .messenger {
-	min-height: 68px;
 	width: 100%;
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	column-gap: 10px;
 	background: #3855a7;
 	padding: 3px 20px 5px 10px;
@@ -346,10 +385,10 @@ body {
 	outline: none;
 	border-radius: 100%;
 	background: #3855a7;
-	margin: auto 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: background 0.4s ease;
 }
 
 .emoticons img {
@@ -359,6 +398,7 @@ body {
 
 .emoticons:hover {
 	background: #5875c7;
+	cursor: pointer;
 }
 
 .emoticons.two {
@@ -376,11 +416,12 @@ body {
 	background: transparent;
 	position: absolute;
 	bottom: 68px;
-	opacity: 0;
-	visibility: hidden;
 	z-index: 999;
 	display: flex;
 	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s ease;
 }
 
 .emojisDiv.active {
@@ -408,6 +449,12 @@ body {
 	height: 45px;
 }
 
+.div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover {
+	width: 25%;
+	height: 45px;
+	cursor: pointer;
+}
+
 .group1, .group2, .group3, .group4, .group5 {
 	width: 100%;
 	height: 100%;
@@ -417,6 +464,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.group1:hover, .group2:hover, .group3:hover, .group4:hover, .group5:hover {
+	cursor: pointer;
 }
 
 .div1, .group1 {
@@ -451,10 +502,17 @@ body {
 	position: absolute;
 	right: 7px;
 	top: 7px;
+	opacity: 1;
+	transition: opacity 0.4s ease;
 }
 .exitit img {
 	width: 12px;
 	height: 12px;
+}
+
+.exitit:hover {
+	cursor: pointer;
+	opacity: 0.75;
 }
 
 .emojis::-webkit-scrollbar {
@@ -479,14 +537,15 @@ body {
 
 .emoji:hover {
 	background: #9f9f9f;
+	cursor: pointer;
 }
 
 .messageBox {
 	height: auto;
 	width: 100%;
 	background: #dfdfdf;
+	margin: 5px 0px;
 	border-radius: 10px;
-	margin: auto;
 }
 
 .message {
@@ -533,10 +592,10 @@ body {
 	outline: none;
 	border-radius: 100%;
 	background: #3855a7;
-	margin: auto 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: background 0.4s ease;
 }
 
 .attach img {
@@ -546,6 +605,7 @@ body {
 
 .attach:hover {
 	background: #5875c7;
+	cursor: pointer;
 }
 
 .addMore {
@@ -581,10 +641,11 @@ body {
 	outline: none;
 	border-radius: 100%;
 	background: #209cff;
-	margin: auto 0px;
+	margin: 2px 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: background 0.4s ease;
 }
 
 .send img {
@@ -598,6 +659,7 @@ body {
 
 .send:hover {
 	background: #46b8f9;
+	cursor: pointer;
 }
 
 .boxMenu {
@@ -607,11 +669,12 @@ body {
 	background: transparent;
 	position: absolute;
 	bottom: 68px;
-	opacity: 0;
-	visibility: hidden;
 	z-index: 999;
 	display: flex;
 	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s ease;
 }
 
 .boxMenu.active {
@@ -658,10 +721,17 @@ body {
 	position: absolute;
 	right: 12px;
 	top: 12px;
+	opacity: 1;
+	transition: opacity 0.4s ease;
 }
 .exit img {
 	width: 15px;
 	height: 15px;
+}
+
+.exit:hover {
+	cursor: pointer;
+	opacity: 0.75;
 }
 
 .modalPrevisual {
@@ -704,9 +774,13 @@ body {
 	width: 30px;
 	height: 30px;
 	position: absolute;
+	opacity: 1;
+	transition: opacity 0.4s ease;
 }
 
 .buttons:hover {
+	cursor: pointer;
+	opacity: 0.75;
 }
 
 .previous {
@@ -765,6 +839,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: background 0.4s ease;
 }
 
 .screenshot img {
@@ -795,11 +870,19 @@ body {
 	position: absolute;
 	right: 10px;
 	top: 10px;
+	opacity: 1;
+	transition: opacity 0.4s ease;
+	z-index: 20;
 }
 
 .quitit img {
 	width: 15px;
 	height: 15px;
+}
+
+.quitit:hover {
+	cursor: pointer;
+	opacity: 0.75;
 }
 
 .modalMap {
@@ -824,6 +907,7 @@ body {
 .position {
 	text-decoration: none;
 	color: white;
+	transition: color 0.4s ease;
 }
 
 .position:hover {
