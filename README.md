@@ -4,7 +4,7 @@
 Interfaz programada con JavaScript y compuesta por módulos.
 Puede ser ejecutada como una PWA.
 
-Se utilizaron las APIs::
+Se utilizaron las siguientes tecnologías:
 - IndexedDB para almacenar allí los mensajes enviados o recibidos. 
 - Intersection Observer para agilizar la recarga de los mensajes almacenados.
 - FileReader para cargar documentos e imágenes.
